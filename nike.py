@@ -70,6 +70,7 @@ class Main(wx.Frame):
         self.Center()
         print(message)
         self.Bind(wx.EVT_CLOSE, self.exit)
+        self.main_panel = wx.Panel(self)
 
-    def exit(self):
+    def exit(self, event):
         self.Destroy()
