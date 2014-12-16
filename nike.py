@@ -71,6 +71,35 @@ class Main(wx.Frame):
         print(message)
         self.Bind(wx.EVT_CLOSE, self.exit)
         self.main_panel = wx.Panel(self)
+        self.id_label = wx.StaticText(self.main_panel, -1, label=u'产品ID:', pos=(20, 20), size=(50, 25))
+        self.id_text = wx.TextCtrl(self.main_panel, -1, pos=(70, 17), size=(75, 25))
+        self.price_label = wx.StaticText(self.main_panel, -1, label=u'价格:', pos=(180, 20), size=(30, 25))
+        self.price_text = wx.TextCtrl(self.main_panel, -1, pos=(215, 17), size=(75, 25))
+
+
 
     def exit(self, event):
         self.Destroy()
+
+
+default_query_params = {
+    u"callback": u"nike_Cart_hanleJCartResponse",
+    u"action": u"addItem",
+    u"lang_locale": u"zh_CN",
+    u"country": u"CN",
+    u"catalogID": u"4",
+    u"productID": u"10188307",
+    u"price": u"899.0",
+    u"siteId": None,
+    u"line1": u"Nike Internationalist Mid QS",
+    u"line2": u"男子运动鞋",
+    u"passcode": None,
+    u"sizeType": None,
+    u"skuAndSize": u"11379175:42",
+    u"qty": u"1",
+    u"rt": u"json",
+    u"view": u"3",
+    u"skuId": u"11379175",
+    u"displaySize": u"42",
+    u"_": u"1418695131412"
+}
